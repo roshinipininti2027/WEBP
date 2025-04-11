@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>23BCE5129</title>
+        <style>
+            form {
+                border: 2px solid black;
+                padding:20px;
+                width: 1100px; 
+            }
+            label {
+                display: block;
+                margin: 10px 0 5px;
+                }
+
+            #time{
+                position: absolute;
+                top:40px;
+                left:1000px;
+            }
+        </style>
+
+    </head>
+    <body onload="gettime()">
+        <form>
+            <h1>Test Javascript From Validation</h1>
+            <div id="time">Time:</div>
+            <label>Name <span style="color: red;">*</span>
+            <div id="alert" style="color: red;"></div>
+            <input type="text" id="name" required>
+            <br>
+            <label>Address</label>
+            <input type="text" id="address">
+            <br>
+            <label>Zip Code<span style="color: red;">*</span>
+            <input type="number" id="zip" required><br>
+            <label>Country<span style="color: red;">*</span>
+            <select name="country">
+                <option>India</option>
+                <option>America</option>
+                <option>Others</option>
+            </select><br>
+            <label>Gender<span style="color: red;">*</span>
+            <input type="radio" name="gend">Male
+            <input type="radio" name="gend">Female<br>
+            <label>Preferences<span style="color: red;">*</span>
+            <input type="checkbox" name="pref">Red
+            <input type="checkbox" name="pref">Green
+            <input type="checkbox" name="pref">Blue
+            <label>pannumber</label>
+            <input type="text" id="pan"><br>
+            <label>Phone<span style="color: red;">*</span>
+            <input type="tel" id="tel" required><br>
+            <label>Email<span style="color: red;">*</span>
+            <input type="email" id="email" required><br>
+            <label>Password(6 to 8 Characters)<span style="color: red;">*</span>
+            <input type="password" id="pass" required><br>
+            <label>Verify Password</label>
+            <input type="password" id="verify"><br>
+            <button type="submit" id="send" onclick="validate()">send</button>
+            <button type="reset" id="send">clear</button>
+        </form>
+    <script type="text/javascript">
+        function validate(){
+            name=document.getElementById("name").value;
+            if(name.length === 0){
+                text=`Please enter your name`
+                document.getElementById("alert").innerHTML=text;
+                return false;
+            }
+            if(name.length>15){
+                alert('Enter Valid Name');
+                return false;
+            }
+            zipcode=document.getElementById("zip").value;
+            zipPattern=/^[0-9]{6}$/;
+            if(!zipPattern.test(zipcode)){
+                alert('Enter Valid Zipcode');
+                return false;
+            }
+            phone=/^[1-9]{1}[0-9]{9}$/;
+            tel=document.getElementById("tel").value;
+            if(!phone.test(tel)){
+                alert("Enter Valid Phone number");
+                return false;
+            }
+            mailid=document.getElementById("email").value;
+            atpos=mailid.indexOf("@");
+            dotpos=mailid.indexOf(".");
+            if(atpos-dotpos<2){
+                alert("Enter valid email id");
+                return false;
+            }
+            pass=document.getElementById("pass").value;
+            pattern=/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@,!,#,$,%,^,&,*,~])/;
+            if(pass.length<8 || pass.length>15 || !pattern.test(pass)){
+                alert('Enter valid password');
+                return false;
+            }
+            pan=document.getElementById("pan").value;
+            pattern1=/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/;
+            if(!pattern1.test(pan)){
+                alert('enter valid PAN');
+                return false;
+            }
+            return true;
+        }
+        function gettime(){
+            date=new Date();
+            hours=date.getHours();
+            min=date.getMinutes();
+            sec=date.getSeconds();
+            time1=`${hours}:${min}:${sec}`;
+            document.getElementById("time").innerHTML=time1;
+        }
+        setInterval(gettime, 1000); 
+    </script>
+    </body>
+</html>
+
