@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            var age=parseInt(prompt("Enter your age"));
+            if(age>=18){
+                confirm("You are eligible to drive");
+            }
+            else{
+                confirm("You are not eligible to drive");
+            }
+        </script>
+    </head>
+</html>
