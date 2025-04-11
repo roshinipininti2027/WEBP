@@ -1,0 +1,19 @@
+ButtonExternal.jsx
+import React from 'react';
+import './styles.css';
+function ButtonExternal() {
+return (
+<button className="styled-btn">External Styled Button</button>
+);
+}
+export default ButtonExternal;
+styles.css
+.styled-btn {
+    background-color: teal;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
