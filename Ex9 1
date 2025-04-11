@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #h1,table,tr,td{
+                border : 2px solid black;
+                border-collapse: collapse;
+
+            }
+        </style>
+        <script type="text/javascript">
+            var arr=[55,62,68,74,59,45,41,58,60,67,65,78,82,88,91,92,90,93,87,80,78,79,72,68,61,59,55,65]
+            var type=[];
+            for(var i=0;i<arr.length;i++){
+                if(arr[i]>=85){
+                    type[i]="HOT DAY";
+                }
+                else if(arr[i]>=60 && arr[i]<=84){
+                    type[i]="PLEASANT DAY";
+                }
+                else if(arr[i]<60){
+                    type[i]="COLD DAY";
+                }
+            }
+        var count=0;
+        for(var i=0;i<arr.length;i++){
+            if(type[i]==="HOT DAY"){
+                count++;
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <h2>No of hot days: <script>document.write(count);</script></h2>
+        <table id ="h1">
+            <tr id ="h1">
+                <th id ="h1">Temperature</th>
+                <th id ="h1">Type Of Day</th>
+            </tr>
+            <script id ="h1">
+                for (var i = 0; i < arr.length; i++) {
+                    document.write("<tr><td>" + arr[i] + "</td><td>" + type[i] + "</td></tr>");
+                } 
+            </script>
+        </table>
+    </body>
+</html>
