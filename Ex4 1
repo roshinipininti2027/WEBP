@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Forms</title>
+    </head>
+    <body>
+        <form>
+            <fieldset><legend><b>Login</b></legend>
+            <label>Username*</label><br>
+            <input type="text" name="uname" id="uname" > <br>
+            <label>Password*</label><br>
+            <input type="password" name="pass" id="pass">
+            </fieldset>
+            <fieldset><legend>Gender*</legend>
+                <input type="radio" name="fe" id="fe">
+                <label>Male</label>
+                <input type="radio" name="fe" id="fo">
+                <label>Female</label>
+            </fieldset>
+            <fieldset>
+                <legend>Programming Skill</legend>
+                <input type="checkbox" name="wjhed" id="dhfsja">
+                <label>Java</label>
+                <input type="checkbox" name="wjhed" id="dfjs">
+                <label>C++</label>
+                <input type="checkbox" name="wjhed" id="sd">
+                <label>C#</label>
+            </fieldset>
+            <fieldset>
+                <legend>Fruit</legend>
+                <label>Choose a fruit:</label>
+                <select name="fru" id=""fru>
+                    <optgroup label="Pome">
+                        <option>Apples</option>
+                        <option>pears</option>
+                    </optgroup>
+                    <optgroup label="Citrus">
+                        <option>oranges</option>
+                        <option>grapefruits</option>
+                        <option>mandarins</option>
+                        <option>limes</option>
+                    </optgroup>
+                    <optgroup label="Stone">
+                        <option>nectarines</option>
+                        <option>apricots</option>
+                        <option>peaches</option>
+                        <option>plums</option>
+                    </optgroup>
+                    <optgroup label="Exotic">
+                        <option>bananas</option>
+                        <option>mangoes</option>
+                    </optgroup>
+                    <optgroup label="Berries">
+                        <option>strawberries</option>
+                        <option>raspberries</option>
+                        <option>blueberries</option>
+                        <option>kiwifruit</option>
+                        <option>passionfruit</option>
+                    </optgroup>
+                    <optgroup label="Melons">
+                        <option>watermelons</option>
+                        <option>rock-melons</option>
+                        <option>honeydew melons</option>
+                    </optgroup>
+                </select>
+            </fieldset><br>
+             <textarea style="height:100px;width:500px">Enter your comment here</textarea><br><br>
+            <input type="Submit" name="Send" value="SEND">
+            <input type="Reset" name="jsnj" value="RESET"> 
+
+        </form>
+    </body>
+
+</html>
