@@ -1,0 +1,88 @@
+App.jsx
+import React, { useState } from 'react';
+
+function Title(props) {
+  return (
+    <h1
+      style={{
+        textAlign: 'center',
+        color: 'orange',
+        fontSize: '2.5rem',
+        fontFamily: 'Arial, sans-serif',
+        marginTop: '20px',
+        backgroundColor: 'black',
+        padding: '10px',
+      }}
+    >
+      {props.title}
+    </h1>
+  );
+}
+
+function Content() {
+  const jokes = [
+    "Why don't skeletons fight each other? They don’t have the guts!",
+    "Parallel lines have so much in common. It’s a shame they’ll never meet.",
+    "Why don’t programmers like nature? It has too many bugs.",
+    "Why did the scarecrow win an award? Because he was outstanding in his field!",
+  ];
+  const [joke, setJoke] = useState(jokes[0]);
+
+  const generateJoke = () => {
+    const index = Math.floor(Math.random() * jokes.length);
+    setJoke(jokes[index]);
+  };
+
+  return (
+    <div style={{ textAlign: 'center', margin: '20px' }}>
+      <p style={{ fontSize: '1.5rem', color: '#333' }}>{joke}</p>
+      <button
+        onClick={generateJoke}
+        style={{
+          padding: '10px 20px',
+          fontSize: '16px',
+          cursor: 'pointer',
+          backgroundColor: '#f0ad4e',
+          border: 'none',
+          borderRadius: '5px',
+        }}
+      >
+        Click to see a joke
+      </button>
+    </div>
+  );
+}
+
+function Footer() {
+  return (
+    <footer
+      style={{
+        backgroundColor: 'black',
+        color: 'white',
+        textAlign: 'center',
+        padding: '15px',
+        marginTop: '20px',
+      }}
+    >
+      <p>This is a static footer message.</p>
+    </footer>
+  );
+}
+
+function App() {
+  const title = "Hello! It's a great step beginning to learn react!";
+
+  return (
+    <div className="container">
+      <div className="content-wrapper">
+        <Title title={title} />
+        <Content />
+      </div>
+      <Footer />
+    </div>
+  );
+}
+
+export default App;
+
+
