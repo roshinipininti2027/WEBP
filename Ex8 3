@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            var eligibility=confirm("are you a student?");
+            if(eligibility){
+                prompt("Enter the registration number");
+            }
+        </script>
+    </head>
+</html>
