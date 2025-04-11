@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            function def(){
+                document.getElementById("h1").innerHTML="Updated title";
+                document.getElementsByName("username")[0].value="John Doe"; 
+                var gend=document.getElementsByName("gender");
+                for(var i=0;i<gend.length;i++){
+                    if(gend[i].checked){
+                        document.getElementById("result").innerHTML=gend[i].value;
+                    }
+                }
+                var no_of_p_tags=document.getElementsByTagName("p");
+                document.getElementById("no_tags").innerHTML=no_of_p_tags.length;
+                var no_of_li_element=document.getElementsByTagName("li");
+                for(var i=0;i<no_of_li_element.length;i++){
+                    console.log(no_of_li_element[i].innerHTML);
+                }
+                var fields = document.getElementsByClassName("input_field");
+                    for (var i = 0; i < fields.length; i++) {
+                        fields[i].style.backgroundColor = "lightblue"; 
+                    }
+                document.querySelector(".class_info").innerHTML="This is the first info paragraph";
+                document.querySelector("input[name='gender']").checked = true;
+                var words=document.querySelectorAll(".info")
+                for (var i = 0; i < words.length; i++) {
+                    document.getElementById("result1").innerHTML+="\t"+words[i].innerHTML; 
+                }
+                document.querySelectorAll("input[class='hobby']").checked = true;
+                var checkboxes = document.querySelectorAll(".hobby"); 
+                var selectedHobbies = [];
+
+                checkboxes.forEach((checkbox) => {
+                        checkbox.checked = true; 
+                        selectedHobbies.push(checkbox.value);
+                    });
+
+                console.log("Selected Hobbies:", selectedHobbies.join(", ")); 
+                document.getElementById("selected_hobbies").innerHTML = "Selected Hobbies: " + selectedHobbies.join(", ");
+
+            }
+        </script>
+    </head>
+    <body onload="def()">
+        <h1 id="h1" value="old">Old title</h1>
+        <form name="f1">
+        <input type="text" name="username"><br>
+        <input type="radio" name="gender" value="Male">Male<br>
+        <input type="radio" name="gender" value="Female">Female<br>
+        <input type="radio" name="gender" value="Others">Other<br>
+        
+        <p class="class_info">the beatiful</p>
+        <p id="result" class="input_field"></p>
+        <p id="no_tags" class="input_field"></p>
+        <ul>
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Guava</li>
+        </ul>
+        <p class="info">hi </p><br>
+        <p class="info">bye</p><br>
+        <p class="info">good</p><br>
+        <p id="result1"></p>
+        <button type="button" onclick="def()">Submit</button>
+        <br><label>CheckBOxes</label>
+        <br><input type="checkbox" class="hobby" value="abcd">abcd
+        <br><input type="checkbox" class="hobby" value="efgh">efgh
+        <br><input type="checkbox" class="hobby" value="ijkf">ijkf
+        <p id="selected_hobbies"></p>
+
+    </form>
+
+    </body>
+</html>
