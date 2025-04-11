@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to my page - [23BCE5129]</title>
+    <style>
+        body {
+            background-image: url('bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body >
+    <p style="color:blue ;font-family:verdena">Roshini Pininti</p>
+    <h6 style="color:violet; font-family: 'Courier New';">A</h6>
+    <h5 style="color: indigo; font-family: 'Franklin Gothic Medium';">B</h5>
+    <h4 style="color:blue; font-family:'Gill Sans';">C</h4>
+    <h3 style="color:green; font-family:'Lucida Sans';">D</h3>
+    <h2 style="color:yellow; font-family:'Segoe UI';">E</h2>
+    <h1 style="color:orange;font-family:'Times New Roman';">F</h1>
+    <p><b>Pininti</b><i>Roshini</i><u>Reddy</u></p>
+    <p style="background-color: yellow;">
+        I aspire to become a software engineer.
+    </p>
+    <p>
+        <i><b>
+        My hobbies include playing badminton,swimming,travelling.
+        </b></i>
+    </p>
+    <!--This is a comment line-->
+    <p>(a-b)<sup>2</sup>=a<sup>2</sup>-2ab+b<sup>2</sup></p>
+    <p>2H<sub>2</sub>+O<sub>2</sub>=2H<sub>2</sub>O</p>
+<pre>
+#include&ltstdio.h&gt
+int main() {
+    int accountNumber = 123456789; // Example account number
+    float balance = 10500.75;     // Example balance
+    printf("Account Number: %d\n", accountNumber);
+    printf("Balance: ₹ %.2f\n", balance);
+    return 0;
+}   
+</pre>
+<marquee>
+    Your Roll Number: 23bce5129
+</marquee>
+<img align = "right" ; src="imresizer-1736917840564.jpg";>
+<div>
+    <p>this is first paragraph</p>
+</div>
+<div>
+    <p>this is second paragraph</p>
+</div><a href="mailto:example@example.com">Send Email</a>
+<p><strong>Acronym for HTML:</strong> The <acronym title="HyperText Markup Language">HTML</acronym> is the standard language used for creating webpages.</p>
+<p><strong>Meter Tag Example:</strong> The battery level is at 
+    <meter value="0.7" min="0" max="1">70%</meter>.
+</p>
+<p><strong>Progress Bar Example:</strong> File upload progress: 
+    <progress value="30" min="0" max="100">30%</progress>
+</p>
+<details>
+    <summary>More Information</summary>
+    <p>This section provides additional information about the topic, which can be expanded or collapsed.</p>
+</details>
+<a href="#top" style=" bottom: 10px; left: 5%; ">Click me to move</a>
+</body>
+</html>
