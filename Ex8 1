@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            var a=parseInt(prompt("Enter first number"));
+            var b=parseInt(prompt("Eneter second number"));
+            var c=prompt("Enter operator");
+            if(c=="+"){
+                alert(a+b);
+            }
+            if(c=="-"){
+                alert(a-b);
+            }
+            if(c=="*"){
+                alert(a*b);
+            }
+            if(c=="/"){
+                alert(a/b);
+            }
+            if(c=="%"){
+                alert(a%b);
+            }
+        </script>
+    </head>
+</html>
