@@ -1,0 +1,67 @@
+App.jsx
+import React, { useState } from 'react';
+import Tc from './Tc';
+import Tbox from './Tbox';
+import Tbutton from './Tbutton';
+
+function App() {
+  const [theme, setTheme] = useState('light');
+
+  const toggleTheme = () => {
+    setTheme(prev => (prev === 'light' ? 'dark' : 'light'));
+  };
+
+  return (
+    <Tc.Provider value={{ theme, toggleTheme }}>
+      <div style={{ backgroundColor: theme === 'light' ? '#fff' : '#121212', minHeight: '100vh', padding: '20px' }}>
+        <h1 style={{ textAlign: 'center' }}>React useContext Theme Toggle</h1>
+        <Tbox />
+        <Tbutton />
+      </div>
+    </Tc.Provider>
+  );
+}
+
+export default App;
+
+
+Tc.jsx
+import { createContext } from 'react';
+const Tc = createContext();
+export default Tc;
+
+Tb.jsx
+import React, { useContext } from 'react';
+import Tc from './Tc';
+function Tb() {
+const { toggleTheme } = useContext(Tc);
+return <button onClick={toggleTheme}>Toggle Theme</button>;
+}
+export default Tb;
+
+Tbox.jsx
+import React, { useContext } from 'react';
+import Tc from './Tc';
+function Tbox() {
+const { theme } = useContext(Tc);
+const boxStyle = {
+backgroundColor: theme === 'light' ? '#f0f0f0' : '#333',
+color: theme === 'light' ? '#000' : '#fff',
+padding: '20px',
+margin: '20px',
+borderRadius: '8px',
+textAlign: 'center',
+};
+return <div style={boxStyle}>Current Theme: {theme}</div>;
+}
+export default Tbox;
+
+Tbutton.jsx
+import React, { useContext } from 'react';
+import Tc from './Tc';
+function Tbutton() {
+const { toggleTheme } = useContext(Tc);
+return <button onClick={toggleTheme}>Toggle Theme</button>;
+}
+export default Tbutton;
+
