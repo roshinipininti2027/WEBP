@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Total with Three Sliders</title>
+</head>
+<body>
+    <h2>Feedback Sliders</h2>
+    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)+parseInt(c.value)">
+        <label for="a">Quality:</label>
+        0<input type="range" id="a" value="50" min="0" max="100">100
+        <br><br>
+        <label for="b">Value for Money:</label>
+        0<input type="range" id="b" value="50" min="0" max="100">100
+        <br><br>
+        <label for="c">Satisfaction:</label>
+        0<input type="range" id="c" value="50" min="0" max="100">100
+        <br><br>
+        <span>Total Feedback: </span><output id="x">150</output>
+    </form>
+
+</body>
+</html>
