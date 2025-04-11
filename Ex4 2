@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Resume</title>
+    </head>
+    <body>
+        <forms>
+            <fieldset>
+                <legend style="color:red ;font:oblique"><b>Personal Details</b></legend>
+                <label>Names&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+                <input type="text" name="dfjh" id="bdfhrj"><br><br>
+                <label>Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+                <input type="password" name="dfjh" id="bdfhrj"><br><br>
+                <label>Email-Id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+                <input type ="email" value="robina@gmail.com"><br><br>
+                <label>Gender&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+                <input type="radio" name="hke" id="efh">
+                <lebel>Male</lebel>
+                <input type="radio" name="hke" id="efh">
+                <label>Female</label><br><br>
+                <label>DOB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+                <input type="date" name="type" id="ejf"><br><br>
+                <label>Mobile#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+                <input type="tel" name="gyejj" id="bejh">
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend style="color:red"><b>Educational Qualification</b></legend>
+                <label>Degree&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+                <select >
+                    <option value="">-- Select Group --></option>
+                    <optgroup label="UG">
+                        <option>BE</option>
+                        <option>BTech</option>
+                        <option>BSc</option>
+                        <option>BA</option>
+                        <option>BCA</option>
+                        <option>BBA</option>
+                        <option>Others</option>
+                    </optgroup>
+                    <optgroup label="PG">
+                        <option>ME</option>
+                        <option>MTech</option>
+                        <option>MSc</option>
+                        <option>MA</option>
+                        <option>MCA</option>
+                        <option>MBA</option>
+                        <option>Others</option>
+                    </optgroup>
+                    <optgroup label="PhD">
+                        <option>Engineering</option>
+                        <option>Science</option>
+                        <option>Management</option>
+                        <option>Others</option>
+                    </optgroup>
+                </select>
+                <br><br>
+                <label >Engineering:&nbsp;</label>
+                <select>
+                <option>--Select Group --</option>
+                <option>CSE</option>
+                <option>ECE</option>
+                <option>EEE</option>
+                <option>CIVIL</option>
+                <option>MECH</option>
+                </select>
+            </fieldset>
+            <br>
+            <label>Hobbies&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+            <input type="checkbox" name="hob" id="hob">
+            <label>Playing chess</label>
+            <input type="checkbox" name="hob" id="hob">
+            <label> Reading Books </label><br><br>
+            <label>Favourite Color &nbsp;:</label>
+            <input type="color" name="boxcolor" id="hjkk">
+            <br><br>
+            <label style ="color:red">Address</label>
+            <br>
+            <textarea style="height:100px; width:300px"></textarea><br><br>
+            <label>Attach Resume:</label>
+            <input type="file" name="file_name" id="hob">
+            <input type="Submit" name="submit" value="Submit">
+        </forms>
+    </body>
+</html>
