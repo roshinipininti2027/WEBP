@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Greeting Page</title>
+</head>
+<body style="text-align: center;">
+    <header>
+        <h1 style="color: red;">Happy Holidays!</h1>
+    </header>
+    <section>
+        <p>Wishing you a wonderful year ahead filled with peace and happiness!</p>
+    </section>
+    <footer>
+        <a href="home.html" style="background-color: green; color: white; padding: 10px 20px; ">Back to Home</a>
+    </footer>
+</body>
+</html>
+
