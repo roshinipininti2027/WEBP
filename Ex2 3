@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        table,tr,th,td{
+            background-color : "23BCE5129";
+            border : 1px solid black;
+            border-collapse:collapse;
+        }
+        </style>
+    </head>
+    <body>
+        <h4><i>A test table with merged cells</i></h4>
+        <table style="background-color:#23bce5">
+            <tr>
+            <th rowspan="2" style="color:blue;">
+                <u>
+                Expenses
+            </u>
+            </th>
+            <th colspan="2" style="align-self:center">
+            Average
+            </th>
+            <th rowspan="2" >
+                    Red <br>
+                    Eyes
+                </th>
+            </tr>
+            <tr>
+            <th>height</th>
+            <th>weight</th>
+            </tr>
+            <tr>
+                <th>Males</th>
+                <td>1.9</td>
+                <td>0.003</td>
+                <td>40%</td>
+            </tr>
+            <tr>
+                <th>Females</th>
+                <td>1.7</td>
+                <td>0.002</td>
+                <td>43%</td>
+            </tr>
+
+    </body>
+    </html>
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        table{
+            border: 1px solid blue;
+            align-self:center;
+            color:white;
+        }
+       </style> 
+    </head>
+    <body>
+        
+        <table style="background-color:blueviolet;border: 1px solid blue;">
+            <tr><td>
+            <table style="background-color:yellow;border: 1px solid blue;">
+                <tr><td>
+                <table style="background-color:red;border:1px solid blue;">
+                    <tr><td>
+                    <table style="background-color:white;border: 1px solid blue;">
+                        <tr><td>
+                        <table style="background-color: green; border: 1px solid blue;">
+                            <tr>
+                                <td>
+                                    <a href="ex23.html">Click Here</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td></tr>
+                    </table>
+                    </td></tr>
+                </table>
+            </td></tr>
+        </table>
+    </td></tr>
+</table>
+</body>
+</html>
