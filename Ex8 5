@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            document.write('<button style="border:2px solid red">23BCE5129</button><br><br>');
+        </script>
+    </head>
+    <body>
+        <button id="h1"></button>
+        <script type="text/javascript">
+            document.getElementById("h1").innerHTML="Roshini Pininti";
+            document.getElementById("h1").style.color="red";
+        </script>
+    </body>
+</html>
