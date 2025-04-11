@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            /* Circle photo style */
+            .myphoto {
+                border: 2px solid black;
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                
+            }
+
+            /* Title styling */
+            .title {
+                color: black;
+                font-size: 20px;
+                font-family: 'Arial', sans-serif;
+                text-align: left;
+                animation: fontChange 5s infinite;
+            }
+
+            /* Animation to change font size and color */
+            @keyframes fontChange {
+                0% {
+                    font-size: 16px;
+                    color: #ff5733; /* Orange color */
+                }
+                50% {
+                    font-size: 20px;
+                    color: #4CAF50; /* Green color */
+                }
+                100% {
+                    font-size: 24px;
+                    color: #2196F3; /* Blue color */
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Make sure the image path is correct -->
+        <img src="passport photo.jpg" class="myphoto" alt="Favorite Singer">
+        <p class="title">My Favourite Singer</p>
+    </body>
+</html>
