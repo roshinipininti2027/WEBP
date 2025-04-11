@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Learn Data Science!</title>
+</head>
+<body>
+    <table style="border: 2px solid orange; border-collapse: collapse;">
+        <tr>
+            <th style="background-color: orange; color: antiquewhite; ">
+                LEARN DATA SCIENCE
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <ul style="list-style-type: none; ">
+                    <li>
+                        <span style="color: grey;">•</span>
+                        <span style="color: blue;">Unlimited jobs</span>
+                    </li>
+                    <li>
+                        <span style="color: grey;">•</span>
+                        <span style="color: blue;">Best benefits anywhere</span>
+                    </li>
+                    <li>
+                        <span style="color: grey;">•</span>
+                        <span style="color: blue;">Call now for an appointment</span>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
