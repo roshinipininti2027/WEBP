@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Roshini Pininti 23bce5129</title>
+        <style>
+            table,tr,td,th{
+                border: 2px solid black;
+                border-collapse: collapse;
+            }
+        </style>
+
+    </head>
+    <body onload="changecolorbutton(), changetextbox(),fourth(),count()">
+        <button type="button"  onclick="dyntable() " >Create table</button>
+        <input type="text" id="avl">
+        <button type="button" id="add" >add element</button>
+        <ul id="h1">
+            <li>Add item1</li>
+            <li>add item2</li>
+        </ul>
+        <input type="text" id="inputField"><br>
+        <input type="text" id="countField" readonly><br>
+        <script>
+            //2nd part
+            function changecolorbutton(){
+                but=document.createElement("button");
+                but.style.backgroundColor="red";
+                but.style.width="20px";
+                but.style.height="15px";
+                but.addEventListener("mouseover",()=>{
+                    but.style.backgroundColor="green";
+                });
+                document.body.appendChild(but);
+                document.body.appendChild(document.createElement("br"))
+            }
+            //3rd part
+            function changetextbox(){
+                t1=document.createElement("input");
+                t1.type="text";
+                t1.style.backgroundColor="green";
+                t1.addEventListener("focus",()=>{
+                    t1.style.backgroundColor="yellow";
+                })
+                t1.addEventListener("change",()=>{
+                    t1.value="Welcome";
+                }
+            )
+            document.body.appendChild(t1);
+            document.body.appendChild(document.createElement("br"));
+            } 
+            //1st part           
+            function dyntable(){
+                table=document.createElement("table");
+                row1=table.insertRow(0);
+                cell1=row1.insertCell(0);
+                cell2=row1.insertCell(1);
+                cell3=row1.insertCell(2);
+                cell1.innerHTML=`Cell 1`;
+                cell2.innerHTML=`Cell 2`;
+                cell3.innerHTML=`Cell 3`;
+
+                row2=table.insertRow(1);
+                cell4=row2.insertCell(0);
+                cell5=row2.insertCell(1);
+                cell6=row2.insertCell(2);
+                cell4.innerHTML=`Cell 4`;
+                cell5.innerHTML=`Cell 5`;
+                cell6.innerHTML=`Cell 6`;
+
+                row3=table.insertRow(2);
+                cell7=row3.insertCell(0);
+                cell8=row3.insertCell(1);
+                cell9=row3.insertCell(2);
+                cell7.innerHTML=`Cell 7`;
+                cell8.innerHTML=`Cell 8`;
+                cell9.innerHTML=`Cell 9`;
+
+                document.body.appendChild(table);
+            }
+            //4th part
+            function fifth(){
+                val=document.getElementById("avl").value;
+                list=document.getElementById("h1");
+                newitem=document.createElement("li");
+                newitem.textContent=val;
+                list.appendChild(newitem);
+            }
+            function fourth(){
+                but=document.getElementById("add");
+                but.addEventListener("dblclick",fifth);
+            }
+            //5th part
+            function count(){
+                const inputField = document.getElementById("inputField");
+                const countField = document.getElementById("countField");
+                let keyPressCount = 0;
+                inputField.addEventListener("keydown", () => {
+                keyPressCount++;
+                countField.value = keyPressCount; 
+            });
+            }
+        </script>
+    </body>
+</html>
