@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Roshini Pininti</title>
+    <script type="text/javascript">
+    function calculate() {
+        var form = document.forms["bmiForm"];
+        var weight = parseInt(form.elements["h1"].value);
+        var feet = parseInt(form.elements["h2"].value);
+        var inches = parseInt(form.elements["h3"].value);
+        var gender = form.elements["gender"].value;
+
+        if (isNaN(weight) || isNaN(feet) || isNaN(inches)) {
+            alert("Please enter valid numbers for weight and height.");
+            return;
+        }
+
+        var totalInches = feet * 12 + inches;
+        var BMI = (703 * weight) / (totalInches * totalInches);
+        BMI = BMI.toFixed(2); 
+
+        form.elements["output"].value = BMI;
+
+        if (gender === "Male" && BMI == 21) {
+        alert("Ideal Range for Male");
+        } else if (gender === "Female" && BMI == 21) {
+            alert("Ideal Range for Female");
+        }
+    }
+    </script>
+</head>
+<body>
+   <form name="bmiForm">
+     <table border="2">
+        <tr>
+            <th colspan="2">BMI Calculator</th>
+        </tr>
+        <tr>
+            <td>Select Gender:
+                <select name="gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </td>
+            </tr>
+            <tr>
+                <td>Enter Your Weight (in pounds):</td>
+                <td><input type="text" name="h1"></td>
+            </tr>
+            <tr>
+                <td>Enter Your Height:</td>
+                <td>
+                <label>Feet: <input type="text" name="h2"></label>
+                   <br>
+                <label>Inches: <input type="text" name="h3"></label>
+            </td>
+            </tr>
+            <tr>
+            <td colspan="2" align="center">
+                   <button type="button" onclick="calculate()">Calculate</button>
+            </td>
+            </tr>
+            <tr>
+                <td>Your BMI:</td>
+                 <td><input type="text" name="output" readonly></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
