@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Animals</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="rainbow-effect">Pet Animals</h1>
+    </header>
+    <div class="content">
+        <div class="descriptions">
+            <section>
+                <h2>Dogs</h2>
+                <p>
+                    Dogs are loyal, friendly, and energetic animals. They are known for their companionship and love for play.
+                </p>
+            </section>
+            <section>
+                <h2>Cats</h2>
+                <p>
+                    Cats are independent and playful pets. They love to sleep and are famous for their agility.
+                </p>
+            </section>
+            <section>
+                <h2>Birds</h2>
+                <p>
+                    Birds are colorful and cheerful. They enjoy flying and are great companions for those who love nature.
+                </p>
+            </section>
+        </div>
+    </div>
+    <div class="ball-container">
+        <svg id="ball" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+            <circle cx="25" cy="25" r="20" fill="yellow" />
+        </svg>
+    </div>
+</body>
+</html>
+
+CSS:
+body {
+    background-image: url('background.jpg');
+    background-position: center;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+.rainbow-effect {
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.descriptions {
+    column-count: 3;
+    column-gap: 20px;
+    line-height: 30pt;
+    padding: 20px;
+    color: #333;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+/* Style for the ball container */
+.ball-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+#ball {
+    position: relative;
+    animation: playWithBall 5s infinite;
+}
+
+@keyframes playWithBall {
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    25% {
+        transform: translate(100px, -50px) rotate(45deg) scale(1.2);
+    }
+    50% {
+        transform: translate(200px, 0) rotate(90deg) scale(1);
+    }
+    75% {
+        transform: translate(100px, 50px) rotate(135deg) scale(0.8);
+    }
+    100% {
+        transform: translate(0, 0) rotate(180deg) scale(1);
+    }
+}
