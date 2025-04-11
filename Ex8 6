@@ -1,0 +1,25 @@
+.html file:
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="js61.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <form name="mainform">
+        <label>Adults(&#8377;10 each)</label><br>
+        <input type="textbox" id="h1"><br>
+        <label>Children(&#8377;5 each)</label><br>
+        <input type="textbox" id="h2"><br>
+        <button type="button" id="h3" onclick="calc()">Total</button>
+        <input type="text" name="total" readonly="readonly">
+        </form>
+    </body>
+</html>
+
+.js file
+function calc(){
+    var no_of_adults=parseInt(document.getElementById("h1").value);
+    var no_of_children=parseInt(document.getElementById("h2").value);
+    document.mainform.total.value=10*no_of_adults+5*no_of_children;
+}
