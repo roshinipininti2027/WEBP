@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grocery Order Form</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #c1c9a3; text-align: center; }
+        form { background: #7f8f6f; padding: 20px; width: 50%; margin: auto; border-radius: 10px; }
+        input, button { padding: 5px; margin: 5px; border-radius: 5px; }
+        .product { display: flex; align-items: center; justify-content: center; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h2>Grocery Order Form</h2>
+    <form id="orderForm">
+        <label>Customer Name:</label>
+        <input type="text" id="customerName" required><br>
+        <label>Phone Number:</label>
+        <input type="tel" id="phoneNumber" required><br>
+        <label>Email:</label>
+        <input type="email" id="email" required><br><br>
+
+        <h3>Products</h3>
+        <div class="product">
+            <input type="checkbox" class="productCheck" value="Apple" data-price="10"> Apple - $10/kg
+            <input type="number" class="productQty" min="0" value="0"> kg
+        </div>
+        <div class="product">
+            <input type="checkbox" class="productCheck" value="Banana" data-price="5"> Banana - $5/kg
+            <input type="number" class="productQty" min="0" value="0"> kg
+        </div>
+        <div class="product">
+            <input type="checkbox" class="productCheck" value="Avocado" data-price="7"> Avocado - $7/kg
+            <input type="number" class="productQty" min="0" value="0"> kg
+        </div>
+        <button type="button" onclick="submitOrder()">Submit</button>
+    </form>
+    <script>
+        function submitOrder() {
+            var name = document.getElementById("customerName").value;
+            var phone = document.getElementById("phoneNumber").value;
+            var email = document.getElementById("email").value;
+            var products = [];
+            var checkboxes = document.querySelectorAll(".productCheck");
+            var quantities = document.querySelectorAll(".productQty");
+            checkboxes.forEach((checkbox, index) => {
+                if (checkbox.checked) {
+                    var productName = checkbox.value;
+                    var productPrice = checkbox.getAttribute("data-price");
+                    var quantity = quantities[index].value;
+                    products.push({ name: productName, price: productPrice, quantity: quantity });
+                }
+            });
+
+            var orderData = {
+                customerName: name,
+                phoneNumber: phone,
+                email: email,
+                products: products
+            };
+            localStorage.setItem("orderData", JSON.stringify(orderData)); 
+            window.location.href = "js331.html"; 
+        }
+    </script>
+</body>
+</html>
+
+
+Receipt
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Receipt</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #c1c9a3; text-align: center; }
+        .receipt { background: #7f8f6f; padding: 20px; width: 50%; margin: auto; border-radius: 10px; }
+    </style>
+</head>
+<body onload="loadReceipt()">
+    <h2>Order Receipt</h2>
+    <div class="receipt">
+        <h3>Customer Details</h3>
+        <p id="customerDetails"></p>
+
+        <h3>Products Ordered</h3>
+        <table border="1" width="100%">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price/kg</th>
+                    <th>Quantity</th>
+                    <th>Total Price</th>
+                </tr>
+            </thead>
+            <tbody id="productList"></tbody>
+        </table>
+
+        <h3>Total Amount: $<span id="totalAmount">0</span></h3>
+    </div>
+
+    <script>
+        function loadReceipt() {
+            var orderData = JSON.parse(localStorage.getItem("orderData"));
+            if (!orderData) {
+                document.body.innerHTML = "<h2>No order found</h2>";
+                return;
+            }
+
+            document.getElementById("customerDetails").innerHTML = 
+                "Name: " + orderData.customerName + "<br>" +
+                "Phone: " + orderData.phoneNumber + "<br>" +
+                "Email: " + orderData.email;
+
+            var productList = document.getElementById("productList");
+            var totalAmount = 0;
+
+            orderData.products.forEach(product => {
+                var totalPrice = product.price * product.quantity;
+                totalAmount += totalPrice;
+
+                var row = "<tr>" +
+                    "<td>" + product.name + "</td>" +
+                    "<td>$" + product.price + "</td>" +
+                    "<td>" + product.quantity + " kg</td>" +
+                    "<td>$" + totalPrice + "</td>" +
+                    "</tr>";
+
+                productList.innerHTML += row;
+            });
+
+            document.getElementById("totalAmount").innerText = totalAmount;
+        }
+    </script>
+</body>
+</html>
