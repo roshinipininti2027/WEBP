@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            var hours_worked=parseInt(prompt("Enter the number of hours worked"));
+            var Cost_Of_Materials=parseInt(prompt("Enter the material cost"));
+            var Labour_cost=hours_worked*45;
+            var Total_Charge=Labour_cost+Cost_Of_Materials;
+            alert("The Labour Cost is "+Labour_cost+"\n"+"The Total Charges are"+Total_Charge);
+        </script>
+    </head>
+</html>
+
