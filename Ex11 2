@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>Simple Timer</h1>
+    <div>
+        <p id="timer">00:00:00</p>
+        <button id="startBtn">Start</button>
+        <button id="stopBtn" >Stop</button>
+        <button id="resetBtn">Reset</button>
+    </div>
+    <script>
+        let seconds = 0;
+        let timer;
+        const timerDisplay = document.getElementById("timer");
+        const startButton = document.getElementById("startBtn");
+        const stopButton = document.getElementById("stopBtn");
+        const resetButton = document.getElementById("resetBtn");
+        function updateTimer() {
+            let hours=Math.floor(seconds/3600);
+            seconds-=hours*3600;
+            let minutes = Math.floor(seconds / 60);
+            let secs = seconds % 60;
+            timerDisplay.textContent = `${pad(hours)}:${pad(minutes)}:${pad(secs)}`;
+        }
+        function pad(number) {
+            return number < 10 ? "0" + number : number;
+        }
+        startButton.addEventListener("click", function() {
+            timer = setInterval(function() {
+                seconds++;
+                updateTimer();
+            }, 1000); 
+        });
+        stopButton.addEventListener("click", function() {
+            clearInterval(timer);
+        });
+        resetButton.addEventListener("click", function() {
+            clearInterval(timer);
+            seconds = 0;
+            updateTimer();
+        });
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body onload="charcounter()">
+    <input type="date" id="dateofbirth">
+    <button onclick="calculateAge()">Calculate Age</button>
+    <br>
+    <input type="textarea" id="char">
+    <p id="count">
+    <script type="text/javascript">
+        //2nd bit
+        function calculateAge(){
+            const dateOfBirth = document.getElementById("dateofbirth").value;
+            const birthYear = new Date(dateOfBirth).getFullYear();
+            const currentYear = new Date().getFullYear();
+            const age = currentYear - birthYear;
+            alert("You are " + age + " years old.");
+        }
+        //3rd bit
+        function charcounter(){
+            charelement=document.getElementById("char");
+            charelement.addEventListener("input",()=>{
+                inputval=charelement.value;
+                val=inputval.length;
+                document.getElementById("count").innerHTML=val;
+            })
+            
+        }
+
+    </script>
+</body>
+</html>
