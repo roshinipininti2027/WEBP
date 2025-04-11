@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            seats=[0,0,0,0,0,0,0,0,0,0];
+            function bookseat(){ 
+            var input=document.f1.t1.value;
+            var flag=0;
+            if(input==1){
+                for(var i=0;i<5;i++){
+                    if(seats[i]==0){
+                        alert("First class seat no "+(parseInt(i)+1)+" is booked. Thank you")
+                        seats[i]=1;
+                        flag=1;
+                        break;
+                    }
+                    else{
+                        flag=0;
+                    }
+                }
+                if(flag==0){
+                    alert("First class seats are not available anymore.")
+                }
+            }
+            else if(input==2){
+                for(var i=5;i<10;i++){
+                    if(seats[i]==0){
+                        alert("Economic class seat no "+(parseInt(i)+1)+" is booked. Thank you")
+                        seats[i]=1;
+                        flag=1;
+                        break;
+                    }
+                    else{
+                        flag=0;
+                    }
+                }
+                if(flag==0){
+                    alert("Economic class seats are not available anymore.")
+                }
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <form name="f1">
+            <label>Enter your choice (1 or 2)</label>
+            <input type="textbox" name="t1">
+        </form>      
+        <button type="button" onclick="bookseat()" height="100px" width="100px">BOOK SEAT</button>   
+    </body>
+</html>
