@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div{
+            height:100px;
+            width:400px;
+            padding:20px;
+            border:6px solid green;
+            margin: 25px;
+            outline:20px solid rgb(255,255,0);
+            }
+        </style>
+    </head>
+    <body>
+       <div><p>
+        VIT CHENNAI IS MOST POPULAR COLLEGE.IM ENJOYING A LOT.LIFE IS VERY GOOD.</p></div> 
+    </body>
+</html>
