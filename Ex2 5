@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Web Development</title>
+    <style>
+        dl {
+            padding-left: 0;
+        }
+        dd {
+            margin-left: 20px;
+        }
+        .sublist {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Learning Web Development</h1>
+    <dl>
+        <dt>I. Background Skills</dt>
+        <dd>A. Unix Commands</dd>
+        <dd>B. Vim Text Editor</dd>
+
+        <dt>II. HTML</dt>
+        <dd>A. Minimal Page</dd>
+        <dd>B. Headings</dd>
+        <dd>C. Tags</dd>
+        <dd>D. Lists
+            <dl class="sublist">
+                <dt>i. Unordered</dt>
+                <dt>ii. Ordered</dt>
+                <dt>iii. Definition</dt>
+                <dt>iv. Nested</dt>
+            </dl>
+        </dd>
+        <dd>E. Links
+            <dl class="sublist">
+                <dt>i. Absolute</dt>
+                <dt>ii. Relative</dt>
+            </dl>
+        </dd>
+        <dd>F. Images</dd>
+
+        <dt>III. CSS</dt>
+        <dd>A. Anatomy</dd>
+        <dd>B. Basic Selectors
+            <dl class="sublist">
+                <dt>i. Element</dt>
+                <dt>ii. Class</dt>
+                <dt>iii. ID</dt>
+                <dt>iv. Group</dt>
+            </dl>
+        </dd>
+        <dd>C. The DOM</dd>
+        <dd>D. Advanced Selectors</dd>
+        <dd>E. Box Model</dd>
+
+        <dt>IV. Programming</dt>
+        <dd>A. Python</dd>
+        <dd>B. JavaScript</dd>
+
+        <dt>V. Database</dt>
+        <dd>A. Flat File</dd>
+        <dd>B. Relational</dd>
+    </dl>
+    <div style="text-align: center;">
+        <a href="home.html">HTML.HOME</a>
+    </div>
+</body>
+</html>
